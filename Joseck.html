@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kariuki's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #34495e;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form input[type="submit"] {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kariuki's Portfolio</h1>
+  <p>Academic Writer | Technical Explorer | Backend Developer</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#interests">Interests</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I'm Kariuki, a passionate academic writer and technical enthusiast based in Kiambu, Kenya. I specialize in synthesizing complex ideas into structured formats and exploring backend development through tools like Linux, MATLAB, and virtual machines. My work bridges social analysis and technical innovation, driven by curiosity and a love for problem-solving.</p>
+</section>
+
+<section id="skills">
+  <h2>Programming Languages</h2>
+  <ul>
+    <li>Python</li>
+    <li>MATLAB</li>
+    <li>Bash (Linux scripting)</li>
+    <li>PowerShell</li>
+    <li>Git</li>
+  </ul>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <p>Bachelor’s Degree in Computer Science from Mount Kenya University</p>
+  <a href="cv.pdf" class="button" download>Download My CV</a>
+</section>
+
+<section id="interests">
+  <h2>Interests</h2>
+  <p>I’m deeply interested in secure workflows, virtual machines, and automating backend processes. I enjoy integrating decision aids into academic and technical environments, and I’m fascinated by interdisciplinary research—especially where race, ethnicity, and technology intersect.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Automated VHD Mounting</strong> – PowerShell script with Task Scheduler integration for seamless virtual hard drive management.
+      <br><a href="https://github.com/username/vhd-mount">View on GitHub</a>
+    </li>
+    <li>
+      <strong>MATLAB Symbolic Toolkit</strong> – Explored symbolic computation and matrix manipulation.
+      <br><a href="https://github.com/username/matlab-symbolic">View on GitHub</a>
+    </li>
+    <li>
+      <strong>Academic Writing Portfolio</strong> – Structured essays and speaker notes on race, ethnicity, and interdisciplinary analysis.
+      <br><a href="https://github.com/username/academic-writing">View on GitHub</a>
+    </li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:kariukijocek@gmail.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    
+    <input type="submit" value="Send">
+  </form>
+</section>
+
+</body>
+</html>
