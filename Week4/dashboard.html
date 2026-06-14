@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* A small CSS override specifically for the dashboard card */
+        .container { max-width: 600px; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin: 2rem 0; }
+        .stat-box { padding: 1rem; background: #f8f9fa; border: 1px solid #ddd; border-radius: 4px; width: 45%; }
+        .logout-btn { background-color: #dc3545; }
+        .logout-btn:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>System Dashboard</h2>
+        <p>Welcome back, <strong>User</strong>!</p>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Profile Status</h3>
+                <p>Active</p>
+            </div>
+            <div class="stat-box">
+                <h3>Access Level</h3>
+                <p>Standard</p>
+            </div>
+        </div>
+        
+        <a href="/logout" class="logout-link">
+            <button class="logout-btn">Logout</button>
+        </a>
+    </div>
+
+</body>
+</html>
