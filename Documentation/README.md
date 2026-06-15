@@ -19,7 +19,7 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
 - **Tasks Completed:** \* Installed Node.js and MongoDB.
   - Successfully initialized the project environment and tested localhost connectivity.
 - **Evidence:**
-  ![Localhost Connected](./images/localhost_connected_wk_1.png)
+  ![Localhost Connected](./Images/localhost_connected_wk_1.png)
 
 ### Week 2: Frontend Design & Planning
 
@@ -28,7 +28,7 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
   - Designed interface wireframes.
   - Planned the request-response workflow between the client and the Express server.
 - **Evidence:**
-  ![HTML Layout](./images/html_layout_wk_2.png)
+  ![HTML Layout](./Images/html_layout_wk_2.png)
 
 ### Week 3: Client-Side Logic & Form Validation
 
@@ -37,7 +37,7 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
   - Wrote JavaScript for DOM manipulation.
   - Implemented front-end form validation to ensure data integrity before server submission.
 - **Evidence:**
-  ![Form Validation](./images/form_validation_wk_3.png)
+  ![Form Validation](./Images/form_validation_wk_3.png)
 
 ### Week 4: Server-Side Processing & Authentication
 
@@ -47,7 +47,7 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
   - Processed POST requests for user registration and login forms.
   - Implemented secure session-based authentication to protect dashboard access.
 - **Evidence:**
-  ![Successful Routing](./images/succesfull_routing_wk_4.png)
+  ![Successful Routing](./Images/succesfull_routing_wk_4.png)
 
 ### Week 5: Database Integration & CRUD Operations
 
@@ -58,7 +58,7 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
   - Implemented full CRUD functionality: Create (registration), Read (login verification), Update (password modification), and Delete (account removal).
 - **Challenges & Solutions:** \* Addressed initial database environment setup error by identifying and reinstalling the correct version of MongoDB.
 - **Evidence:**
-  ![Database User Records](./images/user_records_wk_5.png)
+  ![Database User Records](./Images/user_records_wk_5.png)
 
 ---
 
