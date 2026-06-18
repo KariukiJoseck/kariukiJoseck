@@ -84,7 +84,6 @@ The project successfully demonstrates a complete full-stack workflow, transition
   - Built protected routes that verify active sessions before serving dashboard pages.
   - Implemented secure logout functionality to destroy sessions.
 - **Evidence:**
-  ![Student Portal](./Images/student_portal_wk7.jpg)
-  ![Lecturer Portal](./Images/lecturer_portal_wk7.jpg)
-  ![Admin Portal](./Images/admin_portal_wk7.jpg)
-  
+  ![Student Portal](./Images/student_portal_wk_7.png)
+  ![Lecturer Portal](./Images/lecturer_portal_wk_7.png)
+  ![Admin Portal](./Images/admin_portal_wk_7.png)
