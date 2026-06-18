@@ -65,3 +65,25 @@ A Node.js and Express backend application utilizing MongoDB for persistent data 
 ## Conclusion
 
 The project successfully demonstrates a complete full-stack workflow, transitioning from static web interfaces to a dynamic, data-driven system using modern backend engineering practices and continuous version control via Git.
+
+### Week 6: Database Integration and CRUD Operations
+
+- **Objective:** Connect the web application to a database to persistently store and manipulate user data.
+- **Tasks Completed:**
+  - Configured a local MongoDB connection using the Mongoose ODM (`week6db`).
+  - Designed the primary `User` model to structure incoming registration credentials.
+  - Implemented backend routing for all CRUD operations: Create (registration), Read (login verification), Update (password modification), and Delete (account removal).
+  - Authored a `database-schema.txt` document outlining the NoSQL architecture and data workflow.
+
+  ### Week 7: User Authentication & Role-Based Access Control
+
+- **Objective:** Secure the application with encrypted passwords, session management, and multi-user routing.
+- **Tasks Completed:**
+  - Installed `bcryptjs` and implemented password hashing for all new registrations.
+  - Upgraded the MongoDB User schema to include `Student`, `Lecturer`, and `Administrator` roles.
+  - Built protected routes that verify active sessions before serving dashboard pages.
+  - Implemented secure logout functionality to destroy sessions.
+- **Evidence:**
+  ![Student Portal](./Images/student_portal_wk7.png)
+  ![Lecturer Portal](./Images/lecturer_portal_wk7.png)
+  ![Admin Portal](./Images/admin_portal_wk7.png)

@@ -1,0 +1,33 @@
+Project: Full-Stack User Authentication & CRUD System
+Developer: Kariuki Joseck
+Course: BIT3208 - Week 6 Deliverables
+
+DATABASE ARCHITECTURE OVERVIEW
+---------------------------------------------------------
+Database Technology: MongoDB (NoSQL)
+ODM (Object Data Modeling) Library: Mongoose
+Database Name: week6db
+
+Note on SQL Export: 
+Because this project utilizes MongoDB (a NoSQL document database) rather than a traditional relational database like MySQL, there is no .sql export file. Collections and documents are generated dynamically via Mongoose schemas rather than static CREATE TABLE queries.
+
+Below is the Mongoose Schema definition, which serves as the equivalent to a SQL relational table structure.
+
+COLLECTION: users
+---------------------------------------------------------
+This collection stores all registered user data and authenticates login sessions.
+
+{
+  _id: ObjectId,           // Auto-generated unique identifier (Primary Key equivalent)
+  username: String,        // Required, Unique (Used for login verification)
+  email: String,           // Required (User contact information)
+  password: String,        // Required (Authentication credential)
+  __v: Number              // Auto-generated version key by Mongoose
+}
+
+CRUD IMPLEMENTATION MAPPING
+---------------------------------------------------------
+- CREATE: new User({ ... }).save() -> Triggered on registration form submit.
+- READ: User.findOne({ ... }) -> Triggered during login verification.
+- UPDATE: User.findOneAndUpdate({ ... }) -> Triggered on password change.
+- DELETE: User.findOneAndDelete({ ... }) -> Triggered on account deletion.

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* A small CSS override specifically for the dashboard card */
+        .container { max-width: 600px; text-align: center; }
+        .stats { display: flex; justify-content: space-around; margin: 2rem 0; }
+        .stat-box { padding: 1rem; background: #f8f9fa; border: 1px solid #ddd; border-radius: 4px; width: 45%; }
+        .logout-btn { background-color: #dc3545; }
+        .logout-btn:hover { background-color: #c82333; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Admin Portal</h2>
+        <p>Welcome back, <span id="username-display">Loading...</span>!</p>
+        <hr style="margin: 30px 0;">
+
+<div style="margin-bottom: 20px;">
+    <h3>Update Password</h3>
+    <form action="/update-password" method="POST">
+        <input type="password" name="new_password" placeholder="Enter new password" required style="padding: 5px;">
+        <button type="submit" style="padding: 5px 10px;">Update</button>
+    </form>
+</div>
+
+<div style="border: 1px solid red; padding: 15px; display: inline-block;">
+    <h3 style="color: red; margin-top: 0;">Danger Zone</h3>
+    <p>This action cannot be undone.</p>
+    <form action="/delete-account" method="POST" onsubmit="return confirm('Are you absolutely sure you want to delete your account?');">
+        <button type="submit" style="background-color: red; color: white; padding: 8px 15px; border: none; cursor: pointer;">Delete My Account</button>
+    </form>
+</div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Profile Status</h3>
+                <p>Active</p>
+            </div>
+            <div class="stat-box">
+                <h3>Access Level</h3>
+                <p>Standard</p>
+            </div>
+        </div>
+        
+        <a href="/logout" class="logout-link">
+            <button class="logout-btn">Logout</button>
+        </a>
+    </div>
+<script>
+    // 1. Fetch the logged-in user's name
+    fetch('/api/current-user')
+        .then(response => response.json())
+        .then(data => {
+            if(data.username) {
+                document.getElementById('username-display').innerText = data.username;
+            }
+        })
+        .catch(error => console.error('Error fetching user:', error));
+
+    // 2. (Optional) Fetch all users to display a table of records
+    // You can add a <ul id="user-list"></ul> somewhere in your HTML to see this work
+    fetch('/api/all-users')
+        .then(response => response.json())
+        .then(users => {
+            console.log("All registered users:", users);
+            // We will use this data to build out the Update/Delete table next!
+        });
+            // ---------------------------------------------------------
+    // LOGOUT ROUTE
+    // ---------------------------------------------------------
+    app.get('/logout', (req, res) => {
+        req.session.destroy(); // Shred the virtual ID card
+        res.redirect('/login.html'); // Kick them back to the login screen
+    });
+</script>
+</body>
+</html>
