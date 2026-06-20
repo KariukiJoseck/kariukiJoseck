@@ -1,0 +1,319 @@
+/* =========================================
+   1. BASE STYLES & MOBILE-FIRST
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffaf0; /* A warm, cake-batter white */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Responsive Navigation (Mobile Default) --- */
+.main-header {
+  background-color: #ff6b81; /* Strawberry pink */
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column; /* Stack links vertically on phones */
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: white;
+  color: #ff6b81;
+}
+
+/* --- Home Page Hero Section --- */
+main {
+  flex: 1; /* Pushes the footer to the bottom */
+}
+
+.hero-section {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffeaa7;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d63031;
+}
+
+.hero-text p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d63031;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background-color: #333;
+}
+
+footer {
+  background-color: #2d3436;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+/* --- About Page --- */
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    color: #d63031;
+    margin-bottom: 15px;
+}
+
+/* --- Contact Page --- */
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-info-card h3 {
+    color: #d63031;
+    margin-bottom: 15px;
+}
+
+.contact-info-card p {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* =========================================
+   2. TABLET & DESKTOP BREAKPOINT
+   ========================================= */
+@media (min-width: 768px) {
+  /* Transform Header to Horizontal Flexbox */
+  .main-header {
+    display: flex;
+    justify-content: space-between; /* Logo on left, Links on right */
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-links {
+    flex-direction: row; /* Horizontal row of links */
+    gap: 15px;
+  }
+
+  .nav-links a {
+    background-color: transparent;
+  }
+
+  .hero-section {
+    padding: 80px 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  /* --- About & Contact Tablet/Desktop Layout --- */
+    .about-container, 
+    .contact-container {
+        flex-direction: row; /* Switch to side-by-side */
+        align-items: center; /* Vertically center the items */
+    }
+
+    .about-container img, 
+    .about-text {
+        width: 50%; /* Each takes up half the screen */
+    }
+
+    .contact-info-card, 
+    .contact-form {
+        width: 50%; /* Each takes up half the screen */
+    }  
+}
+/* =========================================
+   3. INTERNAL PAGES (MOBILE-FIRST)
+   ========================================= */
+.page-header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #ffcccc; /* Soft pink header */
+}
+
+.page-header h1 {
+    color: #d63031;
+    margin-bottom: 10px;
+}
+
+/* --- Products Page (Grid Base) --- */
+.cake-product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cake-product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.cake-product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.cake-price {
+    display: block;
+    font-weight: bold;
+    color: #ff6b81;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* --- Training Page (Flexbox Base) --- */
+.training-container {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.training-card {
+    display: flex;
+    flex-direction: column; 
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.training-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.training-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* =========================================
+   4. INTERNAL PAGES BREAKPOINTS
+   ========================================= */
+@media (min-width: 768px) {
+    /* Products snap to 2 columns on tablets */
+    .cake-product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    /* Training cards snap to a side-by-side layout on tablets */
+    .training-card {
+        flex-direction: row; 
+    }
+    
+    .training-card img {
+        width: 40%;
+        height: auto;
+    }
+    
+    .training-details {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Products snap to 4 columns on desktop */
+    .cake-product-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}

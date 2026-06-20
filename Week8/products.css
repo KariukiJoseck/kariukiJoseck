@@ -1,0 +1,87 @@
+/* =========================================
+   1. BASE STYLES & MOBILE (1 Column)
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Responsive Image Rule */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* CSS Grid Setup (Mobile First) */
+.product-grid {
+    display: grid;
+    /* 1 Column for Mobile */
+    grid-template-columns: 1fr; 
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the grid on the page */
+}
+
+/* Product Card Styling */
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #28a745; /* A nice green color for price */
+}
+
+/* =========================================
+   2. TABLET BREAKPOINT (2 Columns)
+   ========================================= */
+@media (min-width: 768px) {
+    .product-grid {
+        /* Change to 2 columns of equal width */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* =========================================
+   3. DESKTOP BREAKPOINT (4 Columns)
+   ========================================= */
+@media (min-width: 1024px) {
+    .product-grid {
+        /* Change to 4 columns of equal width */
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}

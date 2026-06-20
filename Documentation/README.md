@@ -87,3 +87,14 @@ The project successfully demonstrates a complete full-stack workflow, transition
   ![Student Portal](./Images/student_portal_wk_7.png)
   ![Lecturer Portal](./Images/lecturer_portal_wk_7.png)
   ![Admin Portal](./Images/admin_portal_wk_7.png)
+
+### Week 8: Responsive Web Design and Mobile-First Development
+
+- **Objective:** Apply Mobile-First design principles, CSS Flexbox, and CSS Grid to create highly adaptable, multi-device frontend interfaces.
+- **Tasks Completed:**
+  - Designed a responsive Personal Profile interface utilizing fluid CSS Flexbox containers.
+  - Developed a dynamic Product Showcase using CSS Grid with specific tablet and desktop media queries.
+  - Architected a complete 5-page responsive website ("Sweet Creations Bakery") utilizing a reusable global layout shell and responsive navigation.
+  - Implemented mobile-first CSS scaling to ensure zero horizontal overflow and seamless rendering across smartphones, tablets, and wide-screen monitors.
+- **Evidence:**
+  ![Bakery Mobile Navigation](./Images/bakery_mobile_wk_8.png)
